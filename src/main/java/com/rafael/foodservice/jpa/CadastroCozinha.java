@@ -1,7 +1,6 @@
 package com.rafael.foodservice.jpa;
 
 import com.rafael.foodservice.domain.model.Cozinha;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,7 +24,7 @@ public class CadastroCozinha {
     }
 
     @Transactional
-    public Cozinha adicionar(Cozinha cozinha){
+    public Cozinha salvar(Cozinha cozinha){
        return manager.merge(cozinha);
     }
 
