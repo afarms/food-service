@@ -2,14 +2,13 @@ package com.rafael.foodservice.domain.model;
 
 import java.math.BigDecimal;
 import java.util.Objects;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Restaurante {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Mysql que irá gerar a chave
     private Long id;
 
     private String nome;

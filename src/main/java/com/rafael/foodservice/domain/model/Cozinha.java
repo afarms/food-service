@@ -1,14 +1,13 @@
 package com.rafael.foodservice.domain.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 public class Cozinha {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Mysql que irá gerar a chave
     private Long id;
 
     @Column(length = 30)
