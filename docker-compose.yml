@@ -6,7 +6,7 @@ services:
     container_name: food_service
     environment:
       MYSQL_ROOT_PASSWORD: senha_root
-      MYSQL_DATABASE: meu_banco
+      MYSQL_DATABASE: food_service
       MYSQL_USER: foodservice
       MYSQL_PASSWORD: foodservice
     ports:
