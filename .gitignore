@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Eclpise ###
+.classpath
+.projects
+
+### Mysql local test ###
+dados_mysql/
