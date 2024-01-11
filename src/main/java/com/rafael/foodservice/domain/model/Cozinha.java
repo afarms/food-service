@@ -1,5 +1,6 @@
 package com.rafael.foodservice.domain.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Objects;
@@ -10,6 +11,7 @@ public class Cozinha {
     @Id
     private Long id;
 
+    @Column(length = 30)
     private String nome;
 
     public Long getId() {
