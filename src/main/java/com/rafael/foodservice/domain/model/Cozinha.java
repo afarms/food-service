@@ -41,4 +41,5 @@ public class Cozinha {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }
