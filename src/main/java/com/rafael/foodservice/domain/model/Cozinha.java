@@ -1,8 +1,13 @@
 package com.rafael.foodservice.domain.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.Objects;
 
+@Getter
+@Setter
 @Entity
 public class Cozinha {
 
@@ -12,22 +17,6 @@ public class Cozinha {
 
     @Column(length = 30)
     private String nome;
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     @Override
     public boolean equals(Object o) {
