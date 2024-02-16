@@ -1,9 +1,9 @@
 package com.rafael.foodservice.infrastructure.repository;
 
-import com.rafael.foodservice.domain.model.Cozinha;
 import com.rafael.foodservice.domain.model.Restaurante;
 import com.rafael.foodservice.domain.repository.RestauranteRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -19,11 +19,13 @@ public class RestauranteRepositoryImp implements RestauranteRepository {
         return manager.find(Restaurante.class, id);
     }
 
+    @Transactional
     @Override
     public Restaurante salvar(Restaurante restaurante) {
         return manager.merge(restaurante);
     }
 
+    @Transactional
     @Override
     public void remover(Restaurante restaurante) {
         restaurante = buscar(restaurante.getId());
